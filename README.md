@@ -7,6 +7,9 @@ Use [`expo-router`](https://expo.github.io/router) to build native navigation us
 ```sh
 npx create-expo-app -e with-router
 npm install
+[open android emulator
+run your device]
+npm run android 
 ```
 
 ## 📝 Notes
