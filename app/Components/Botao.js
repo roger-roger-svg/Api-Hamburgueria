@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { View, Text, TouchableHighlight, StyleSheet } from "react-native";
 
-const ButtonComprar = () => {
+const Button = () => {
   const [isPressed, setIsPressed] = useState(false);
 
   const handlePress = () => {
@@ -36,4 +36,4 @@ const styles = StyleSheet.create({
     borderColor: "black",
   },
 });
-export default ButtonComprar;
+export default Button;

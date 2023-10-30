@@ -7,6 +7,9 @@ import {
   Switch,
   TouchableHighlight,
   ScrollView,
+  Icon,
+  Button,
+  Pressable,
 } from "react-native";
 import { Picker } from "@react-native-picker/picker";
 
@@ -15,8 +18,7 @@ import Carousel, { PaginationLight } from "react-native-x-carousel";
 import axios from "axios";
 import List from "./Components/List";
 import ProductModal from "./Components/ProductModal";
-import ButtonComprar from "./Components/Botao";
-import { Link } from "expo-router";
+import { useLink, Link } from "expo-router";
 
 const DATA = [
   {
@@ -126,6 +128,7 @@ export default function Page() {
   const closeCustomAlert = () => {
     setIsModalVisible(false);
   };
+
   return (
     <SafeAreaView style={styles.screen}>
       <View style={styles.containerLogo}>
@@ -198,7 +201,8 @@ export default function Page() {
             {preco && (
               <Text style={styles.textOutput}>Preço: R${preco} reais</Text>
             )}
-            <ButtonComprar></ButtonComprar>
+
+            <Link href="/Compra">Comprar</Link>
           </View>
         </>
       )}
